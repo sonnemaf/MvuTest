@@ -8,20 +8,21 @@ namespace MvuTest {
 
     public class MainPage : MvuPage {
 
+        private TextBlock2 _tb;
+
+        private int _count;
+
         protected override IUIElement2 Build() {
 
             return new StackPanel2()
             {
                 new ToggleButton2("Toggle it")
                     .Width(200)
-                    .FontSize(30)
-                    .Click((sender, e) => {
-                        _ = new MessageDialog("Test 1").ShowAsync();
-                    }),
-                new Button2("Small Button", (sender, e) => {
-                    _ = new MessageDialog("Test 2").ShowAsync();
+                    .FontSize(30),
+                new Button2("Increment", (sender, e) => {
+                    _tb.Text($"Count {++_count}");
                 }).HorizontalAlignment(HorizontalAlignment.Center),
-                new TextBlock2("Hello World")
+                (_tb = new TextBlock2("Count 0"))
                     .FontSize(20)
                     .Foreground(Colors.Red),
                 new TextBox2("Fons Sonnemans")
