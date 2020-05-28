@@ -1,0 +1,5 @@
+// TODO: DataBinding
+// TODO: Getters (GetFontSize)
+// TODO: Unsubscribe events
+// TODO: Interfaces like ITextBlock 1tm7
+// TODO: Attached Properties
