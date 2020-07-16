@@ -126,6 +126,7 @@
     <Compile Include="Controls\ButtonBase2.cs" />
     <Compile Include="Controls\ContentControl2.cs" />
     <Compile Include="Controls\Control2.cs" />
+    <Compile Include="Controls\Extensions.cs" />
     <Compile Include="Controls\FrameworkElement2.cs" />
     <Compile Include="Controls\IUIElement2.cs" />
     <Compile Include="Controls\MvuPage.cs" />

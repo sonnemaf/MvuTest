@@ -1,7 +1,8 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
 namespace MvuTest.Controls {
-    public abstract class MvuPage : Page {
+    public abstract class MvuPage : Page, IUIElement2 {
 
         public MvuPage() {
             this.Content = Build().Control;
@@ -9,5 +10,6 @@ namespace MvuTest.Controls {
 
         protected abstract IUIElement2 Build();
 
+        public UIElement Control => this;
     }
 }

@@ -13,5 +13,10 @@ namespace MvuTest.Controls {
             this.Control.Spacing = value;
             return Chain;
         }
+
+        public StackPanel2 Orientation(Orientation value) {
+            this.Control.Orientation = value;
+            return Chain;
+        }
     }
 }
