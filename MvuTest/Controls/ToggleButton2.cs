@@ -12,6 +12,12 @@ namespace MvuTest.Controls {
             Click(click);
         }
 
+        public ToggleButton2 IsChecked(bool? value) {
+            this.Control.IsChecked = value;
+            return Chain;
+        }
+
         protected override ToggleButton CreateControl() => new ToggleButton();
+
     }
 }

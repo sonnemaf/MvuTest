@@ -15,6 +15,7 @@ namespace MvuTest {
         protected override IUIElement2 Build() =>
             this.StackPanel(
                 this.ToggleButton("Toggle it")
+                    .IsChecked(true)
                     .Width(200)
                     .FontSize(30),
                 this.Button("Increment", (sender, e) => {
@@ -29,7 +30,5 @@ namespace MvuTest {
              .HorizontalAlignment(HorizontalAlignment.Center)
              .VerticalAlignment(VerticalAlignment.Center);
     }
-
-
 
 }
