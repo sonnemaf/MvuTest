@@ -15,25 +15,23 @@ namespace MvuTest {
 
         private int _count;
 
-        protected override IUIElement2 Build() {
-
-            return new StackPanel2()
-            {
-                new ToggleButton2("Toggle it")
+        protected override IUIElement2 Build() =>
+            this.StackPanel(
+                this.ToggleButton("Toggle it")
                     .Width(200)
                     .FontSize(30),
-                new Button2("Increment", (sender, e) => {
+                this.Button("Increment", (sender, e) => {
                     _tb.Text($"Count {++_count}");
                 }).HorizontalAlignment(HorizontalAlignment.Center),
-                (_tb = new TextBlock2("Count 0"))
+                (_tb = this.TextBlock("Count 0"))
                     .FontSize(20)
                     .Foreground(Colors.Red),
-                new TextBox2("Fons Sonnemans")
-                    .Header("Name"),
-            }.Spacing(12)
+                this.TextBox("Fons Sonnemans")
+                    .Header("Name")
+            ).Spacing(12)
              .HorizontalAlignment(HorizontalAlignment.Center)
              .VerticalAlignment(VerticalAlignment.Center);
-        }
     }
+
 }
 ```
